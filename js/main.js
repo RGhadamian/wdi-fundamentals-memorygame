@@ -42,15 +42,16 @@ function flipCard () {
   checkForMatch();
 };
 
+function createBoard() {
+  for (i=0; i<cards.length; i++) {
+    var cardElement = document.createElement("img");
 
-var cardElement = document.createElement("img");
-
-cardElement.setAttribute("src", "images/back.png");
-cardElement.setAttribute("data-id", "i");
-
-cardElement.addEventListener("click", flipCard());
-
-document.getElementById("game-board").appendChild(cardElement);
+    cardElement.setAttribute("src", "images/back.png");
+    cardElement.setAttribute("data-id", "i");
+    cardElement.addEventListener("click", flipCard());
+    document.getElementById("game-board").appendChild("cardElement");
+  };
+};
 
 createBoard();
 //console.log(cardsInPlay);
